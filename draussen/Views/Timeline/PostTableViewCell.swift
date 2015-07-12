@@ -48,20 +48,20 @@ class PostTableViewCell: UITableViewCell {
         // 1
         likeBond = Bond<[PFUser]?>() { [unowned self] likeList in
             // 2
-            if let likeList = likeList {
+            //if let likeList = likeList {
                 // 3
-                self.likesLabel.text = self.stringFromUserList(likeList)
+                //self.likesLabel.text = self.stringFromUserList(likeList)
                 // 4
-                self.likeButton.selected = contains(likeList, PFUser.currentUser()!)
+                //self.likeButton.selected = contains(likeList, PFUser.currentUser()!)
                 // 5
-                self.likesIconImageView.hidden = (likeList.count == 0)
-            } else {
+              //  self.likesIconImageView.hidden = (likeList.count == 0)
+            //} else {
                 // 6
                 // if there is no list of users that like this post, reset everything
-                self.likesLabel.text = ""
-                self.likeButton.selected = false
-                self.likesIconImageView.hidden = true
-            }
+                //self.likesLabel.text = ""
+                //self.likeButton.selected = false
+                //self.likesIconImageView.hidden = true
+            //}
         }
     }
     
